@@ -147,4 +147,56 @@ ul#features li p {
 	grid-row-gap: 10px;
 }
 
+ul#features-three {
+	background-color: #93C873;
+	padding: 1em;
+	text-align: center;
+	width: 70%;
+
+	align-items: end;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+
+	/*This property creates rows that align from the right*/
+	/*justify-items: end;*/
+}
+
+ul#features-three li:nth-child(3) {
+	justify-self: end;
+}
+
+
+ul#features-three li p {
+	color: #4C4C4C;
+	/*background-color: green;*/
+}
+
+ul#features-three li:nth-child(1) {
+	background-color: #A0D87D;
+}
+
+ul#features-three li:nth-child(2) {
+	background-color: #BEF19E;
+}
+
+ul#features-three li:nth-child(3) {
+	background-color: #A0D87D;
+}
+
+ul#features-four {
+	background-color: #E9B1EF;
+	padding: 2em;
+	width: 60%;
+
+	display: grid;
+	grid-column-gap: 20px;
+	grid-template-columns: repeat(4, auto);
+
+}
+
+ul#features-four li p {
+	background-color: #fff;
+}
+
+
 
