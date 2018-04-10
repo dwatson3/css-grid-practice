@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+body, html {
+	height: 100%;
+}
+
 body {
 	display: grid;
-	grid-template-rows: 51px 30%;
+
+	grid-template-areas: 
+		"sidebar right"
+		"footer footer";
+
+	grid-template-rows: auto 50px;
+	grid-template-columns: 12% auto;
 
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
@@ -76,3 +86,65 @@ img {
 	height: 200px;
 	width: 200px;
 }
+
+.sidebar {
+	background-color: #1c9090;
+	color: #fff;
+	grid-area: sidebar;
+	padding: 1em;
+}
+
+.main {
+	display: grid;
+	grid-area: right;
+	grid-template-rows: 51px fit-content(30%);
+}
+
+footer {
+	background-color: lightgray;
+	grid-area: footer;
+}
+
+#features {
+	display: grid;
+
+	/*This property below creates 5 columns of equal length*/
+	grid-template-columns: repeat(5, auto);
+	
+	/*This property below creates column gaps of 10px*/
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+ul#features i {
+	font-size: 2em;
+}
+
+ul#features {
+	margin: 0;
+	padding: 0;
+}
+
+ul#features li {
+	background-color: lightgray;
+	padding: 1em;
+}
+
+ul#features li p {
+	color: #4C4C4C;
+}
+
+#features-two {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+
+	/*This property below creates two rows of equal length*/
+	grid-template-rows: repeat(2, auto);
+
+	grid-column-gap: 10px;
+
+	/*This property below creates row gaps of 10px*/
+	grid-row-gap: 10px;
+}
+
+
