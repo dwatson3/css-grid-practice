@@ -190,12 +190,69 @@ ul#features-four {
 
 	display: grid;
 	grid-column-gap: 20px;
-	grid-template-columns: repeat(4, auto);
+
+	/*This property is an example of a fixed-width column*/
+	grid-template-columns: 800px;
+
+	/*This makes it look totally off! Commenting it out*/
+	justify-content: space-around;
 
 }
 
 ul#features-four li p {
 	background-color: #fff;
+}
+
+
+/*First Media Query for Tablet*/
+@media screen and (max-width: 60em) {
+	.sidebar {
+		display: none;
+	}
+
+	body, html {
+	height: 100%;
+	}
+
+	body {
+		display: grid;
+
+		grid-template-columns: auto;
+		grid-template-areas:
+			"right"
+			"footer";
+	}
+
+	/*Covered a bit on renaming grids so that they are in a different order*/
+	/*for tablet. Found it a bit confusing, so I'll have to review*/
+	/*grid-template-areas and naming*/
+
+	#features {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(3, auto); 
+	}
+
+	ul#features li:nth-child(5) {
+		/*This feature allows the fifth column to span all*/
+		/*/*the way to the second column. Cool feature!*/
+		grid-column: 1 / span 2;
+	}
+
+	#features-two {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(3, auto);
+	}
+
+	#features-three {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(3, auto);
+	}
+
+	#features-four {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(3, auto);
+	}
+
 }
 
 
